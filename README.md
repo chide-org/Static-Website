@@ -8,17 +8,16 @@
 
 下面的网址还不足以直达你的网页
 
->https://github.com/chide-org/Static-Website/
+>https://chide-org.github.io/Static-Website/
 
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/aa074ea0-3ace-4395-bc9c-961a343f0bf9">
 
 
 **你需要在“/”之后加上你上传的文件路径**
 
-比如访问我的主页,需要在“/”后加上“homepage of YGZ.html”，如下
+比如访问我的主页,需要在“/”后加上“YGZ.html”，如下
 
->https://github.com/chide-org/Static-Website/homepage of YGZ.html
-
+>https://chide-org.github.io/Static-Website/YGZ.html
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/61701b72-4822-43df-b449-9d3fd9fc92d4">
 
 ***
