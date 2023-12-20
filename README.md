@@ -2,7 +2,7 @@
 
 ### 使用方法
 
-视频教程 [bilibili](https://www.bilibili.com/video/BV17S4y1P7qH/?p=11&spm_id_from=pageDriver, "静态网站部署")
+视频教程讲解的还是很好的本人不再赘述，click here -> [bilibili](https://www.bilibili.com/video/BV17S4y1P7qH/?p=11&spm_id_from=pageDriver, "静态网站部署")
 
 **补充说明**
 
