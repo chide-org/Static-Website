@@ -21,3 +21,6 @@
 
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/61701b72-4822-43df-b449-9d3fd9fc92d4">
 
+***
+
+### 欢迎dalao指导，也欢迎和我一起学习html和markdown
