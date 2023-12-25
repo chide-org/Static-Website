@@ -8,7 +8,7 @@
 
 下面的网址还不足以直达你的网页
 
->https://chide-org.github.io/Static-Website/
+>https://chide-org.github.io/static-web/
 
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/aa074ea0-3ace-4395-bc9c-961a343f0bf9">
 
@@ -17,7 +17,7 @@
 
 比如访问我的主页,需要在“/”后加上“YGZ.html”，如下
 
->https://chide-org.github.io/Static-Website/YGZ.html
+>https://chide-org.github.io/static-web/YGZ.html
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/61701b72-4822-43df-b449-9d3fd9fc92d4">
 
 ***
