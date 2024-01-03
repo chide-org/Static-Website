@@ -15,9 +15,9 @@
 
 **你需要在“/”之后加上你上传的文件路径**
 
-比如访问我的主页,需要在“/”后加上“YGZ.html”，如下
+比如访问我的主页,需要在“/”后加上“YGZ/YGZ.html”，如下
 
->https://chide-org.github.io/static-web/YGZ.html
+>https://chide-org.github.io/static-web/YGZ/YGZ.html
 <img width="400" alt="image" src="https://github.com/chide-org/Static-Website/assets/144027281/61701b72-4822-43df-b449-9d3fd9fc92d4">
 
 ***
