@@ -35,7 +35,7 @@ body {
 }
 #input {
   background: 0;
-  font-size: 0.5em;
+  font-size: 0.6em;
   line-height: 1.5;
   text-align: center;
   border: 0;
@@ -43,6 +43,7 @@ body {
   margin-top: 100px;
   color: white;
   max-width: 90vw;
+  outline: none;
 }
 input::placeholder {
   color: #cac9c9;
