@@ -1,0 +1,52 @@
+/* * {
+  border: 1px solid #ffffff;
+} */
+body {
+  background-image: url("../image/starry-sky.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+  width: 97vw;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#time {
+  font-size: 5em;
+  margin: 0;
+}
+#date {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 1.2em;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  font-size: 3em;
+  margin-bottom: 200px;
+}
+#input {
+  background: 0;
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+  border: 0;
+  border-bottom: 2px solid #f5f4f4;
+  margin-top: 100px;
+  color: white;
+  max-width: 90vw;
+}
+input::placeholder {
+  color: #cac9c9;
+}
+#button {
+  padding: 20px;
+}
