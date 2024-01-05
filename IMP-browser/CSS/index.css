@@ -165,15 +165,16 @@ li {
   font-weight: bold;
   color: #a8a8a8;
 }
-.memo {
-  top: 30%;
-}
+
 .addMemo {
   display: none;
 }
 /* 手机端适配 */
 
 @media (max-width: 700px) {
+  .memo {
+  top: 30%;
+  }
   body {
     background-image: url("../image/starry-sky.jpg");
     background-position: top;
