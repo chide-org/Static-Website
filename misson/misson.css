@@ -1,0 +1,31 @@
+li {
+  position: relative;
+}
+li::before,
+li::after {
+  content: "";
+  display: block;
+  height: 16px;
+  background-color: #1f4a59;
+  position: absolute;
+  bottom: -28px;
+}
+li::before {
+  width: 100%;
+}
+li::after {
+  background-image: linear-gradient(90deg, #0fbcf9, #34e7e4);
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1.2s;
+  width: var(--width, 10%);
+}
+
+@keyframes ccc {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
