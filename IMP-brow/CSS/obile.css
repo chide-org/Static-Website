@@ -1,0 +1,147 @@
+/* 手机端适配 */
+
+@media (max-width: 950px) {
+  .memo {
+    top: 30%;
+  }
+
+  body {
+    background-image: url("../image/starry-sky.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 300%;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  #time {
+    font-size: 5em;
+    margin: 0;
+  }
+  #date {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 1.2em;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    font-size: 3em;
+    margin-bottom: 200px;
+    position: absolute;
+    top: 40%;
+    max-width: 80vw;
+  }
+  #input {
+    background: 0;
+    font-size: 0.7em;
+    line-height: 1.5;
+    text-align: center;
+    border: 0;
+    border-bottom: 2px solid #f5f4f4;
+    margin-bottom: 0px;
+    margin-left: 0;
+    color: white;
+    max-width: 80vw;
+    outline: none;
+  }
+  input::placeholder {
+    color: #cac9c9;
+  }
+  #button {
+    font-size: 0.8em;
+    padding: 20px;
+  }
+  .memoInputAdd {
+    width: 60vw;
+    font-size: 1em;
+    flex-direction: column;
+  }
+  .memoInput {
+    margin-left: 0;
+    max-width: 70vw;
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  .addMemo {
+    font-family: cursive;
+    display: flex;
+    border: transparent;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .addMemo:hover {
+    opacity: 0.5;
+  }
+  .mobileButtom {
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .tip {
+    display: none;
+  }
+  .content {
+    left: 8vw;
+    width: 60vw;
+    bottom: 25%;
+    padding: 0;
+  }
+  li {
+    font-weight: normal;
+  }
+  /* 记录学习前端的每一天 */
+  #check {
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+    background-color: rgb(42, 145, 110);
+    color: #e7e3e3;
+    cursor: pointer;
+  }
+  #check:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 悬浮时的阴影效果 */
+  }
+  #show {
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 4%;
+    top: 2%;
+  }
+  #showTime {
+    font-size: 4em;
+    font-weight: bold;
+    color: #a8a8a8;
+  }
+  #preShowTime {
+    color: #a8a8a8;
+  }
+  #handleSet {
+    display: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #5b87c5;
+    color: white;
+    line-height: 1.5;
+    font-size: 1em;
+    text-align: center;
+    width: 40px;
+  }
+}

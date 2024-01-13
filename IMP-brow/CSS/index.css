@@ -16,16 +16,33 @@ body {
   justify-content: center;
   height: 150vh;
 }
+.absolute {
+  position: absolute;
+}
+.left2 {
+  left: 2%;
+}
+.top2 {
+  top: 2%;
+}
+.square40 {
+  width: 40px;
+  height: 40px;
+}
+.pad5 {
+  padding: 5px;
+}
 
 .box {
   display: flex;
+  margin-top: 30px;
   align-items: center;
   justify-content: center;
 }
 /* 时间 */
 body div:first-child {
   position: absolute;
-  top: 10%;
+  top: 15%;
 }
 #time {
   font-size: 5em;

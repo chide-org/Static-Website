@@ -11,7 +11,7 @@
     />
     <link rel="icon" href="./image/log.ico" />
     <link rel="stylesheet" href="./CSS/index.css" />
-    <link rel="stylesheet" href="./CSS/mobile.css" />
+    <link rel="stylesheet" href="./CSS/obile.css" />
   </head>
 
   <body>
@@ -29,7 +29,7 @@
     </div>
 
     <!-- 备忘录 -->
-    <div class="memo flex col center">
+    <div id="memo" class="memo flex col center">
       <div class="content">
         <ul id="memoContent"></ul>
       </div>
@@ -52,6 +52,19 @@
       <input id="handleSet" placeholder="handle" type="text" />
     </div>
 
+    <img
+      id="fullScreen"
+      src="./image/full.png"
+      class="absolute top2 left2 square40"
+      alt="全屏显示"
+    />
+    <img
+      id="fullScreenHover"
+      src="./image/full-on.png"
+      class="absolute top2 left2 square40"
+      alt="全屏显示"
+      style="display: none"
+    />
     <!-- JS -->
     <script src="./JS/index.js"></script>
   </body>
