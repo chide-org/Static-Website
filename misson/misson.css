@@ -1,5 +1,47 @@
+* {
+  /* border: 1px solid red; */
+  color: white;
+}
+body {
+  background-color: #0c3442;
+}
+add {
+  font-size: 1.8em;
+}
+input {
+  font-size: 1em;
+  border: 0;
+  line-height: 1.5;
+  outline: none;
+  background-color: #0c3442;
+  border-bottom: 2px solid white;
+  caret-color: azure;
+  text-align: center;
+}
+
+button {
+  font-size: 1.3rem;
+  border-radius: 15px;
+  padding: 3px 8px;
+  font-weight: bold;
+  background-color: #06405d;
+}
+button:hover {
+  border-style: groove;
+}
+li button:first-child {
+  position: absolute;
+  right: 17%;
+}
+li button:last-child {
+  position: absolute;
+  right: 7%;
+}
 li {
   position: relative;
+  padding: 20px 0;
+  list-style: none;
+  font-size: 2em;
 }
 li::before,
 li::after {
@@ -8,19 +50,23 @@ li::after {
   height: 16px;
   background-color: #1f4a59;
   position: absolute;
-  bottom: -28px;
+  bottom: 0;
+  border-radius: 10px;
 }
 li::before {
-  width: 100%;
+  width: 95%;
 }
 li::after {
   background-image: linear-gradient(90deg, #0fbcf9, #34e7e4);
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: 1.2s;
-  width: var(--width, 10%);
+  width: var(--width, 0);
 }
-
+button {
+  margin: 5px 0;
+  margin-left: 20px;
+}
 @keyframes ccc {
   from {
     width: 0;
