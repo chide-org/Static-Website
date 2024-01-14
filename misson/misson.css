@@ -1,6 +1,7 @@
 * {
   /* border: 1px solid red; */
   color: white;
+  font-family: cursive;
 }
 body {
   background-color: #0c3442;
@@ -18,11 +19,10 @@ input {
   caret-color: azure;
   text-align: center;
 }
-
 button {
   font-size: 1.3rem;
   border-radius: 15px;
-  padding: 3px 8px;
+  padding: 2px 8px;
   font-weight: bold;
   background-color: #06405d;
 }
