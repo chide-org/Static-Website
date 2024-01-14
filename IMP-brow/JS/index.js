@@ -259,7 +259,6 @@ show.addEventListener("wheel", handle);
 //全屏函数
 let memoBoard = document.getElementById("memo");
 let html = document.querySelector("html");
-let fullScreenHover = document.getElementById("fullScreenHover");
 let fullButton = document.querySelector("#fullScreen");
 function fullScreen() {
   if (document.fullscreenElement) {
@@ -269,21 +268,3 @@ function fullScreen() {
   }
 }
 fullButton.addEventListener("click", fullScreen);
-fullScreenHover.addEventListener("click", fullScreen);
-
-//全屏悬停按钮
-fullScreenHover.style.display = "none";
-
-fullButton.addEventListener("mouseenter", function () {
-  // 鼠标进入时显示悬停图片
-  console.log("enter");
-  fullButton.style.display = "none";
-  fullScreenHover.style.display = "inline-block";
-});
-
-fullScreenHover.addEventListener("mouseleave", function () {
-  // 鼠标离开时切换回正常图片
-  console.log("leave");
-  fullButton.style.display = "inline-block";
-  fullScreenHover.style.display = "none";
-});
