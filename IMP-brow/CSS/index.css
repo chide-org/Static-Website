@@ -16,6 +16,9 @@ body {
   justify-content: center;
   height: 150vh;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 .absolute {
   position: absolute;
 }
@@ -25,9 +28,9 @@ body {
 .top2 {
   top: 2%;
 }
-.square40 {
-  width: 40px;
-  height: 40px;
+.square30 {
+  width: 30px;
+  height: 30px;
 }
 .pad5 {
   padding: 5px;
