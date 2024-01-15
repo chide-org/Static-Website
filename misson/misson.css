@@ -5,6 +5,9 @@
 }
 body {
   background-color: #0c3442;
+   background-image: url(./source/downsun.webp);
+  background-size: cover;
+  background-attachment: fixed;
 }
 add {
   font-size: 1.8em;
