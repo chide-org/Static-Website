@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rapheal的公共留言板</title>
+    <style>
+      .flex {
+        display: flex;
+      }
+      .center {
+        justify-content: center;
+        align-items: center;
+      }
+      .col {
+        flex-direction: column;
+      }
+      .bor-rad {
+        border-radius: 20px;
+      }
+      .op5 {
+        opacity: 0.5;
+      }
+      body {
+        background-image: url(sun.webp);
+        background-attachment: fixed;
+        background-size: cover;
+        border: 0;
+      }
+      .box90 {
+        width: 90vw;
+        height: 90vh;
+      }
+      .box97 {
+        width: 97vw;
+        height: 97vh;
+      }
+      .bg-w {
+        background-color: white;
+      }
+      .re {
+        position: relative;
+      }
+      .ab {
+        position: absolute;
+      }
+      .bottom {
+        bottom: 2%;
+      }
+      .font2 {
+        font-size: 2em;
+      }
+      .input {
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid black;
+        text-align: center;
+      }
+      .button {
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
+      }
+      ul {
+        position: absolute;
+        left: 20%;
+        top: 2%;
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body class="box97 flex center">
+    <div class="bor-rad op5 box90 bg-w re flex center">
+      <ul></ul>
+      <input
+        class="input font2 ab bottom"
+        type="text"
+        placeholder="给出你的答案！"
+      />
+      <button class="button" type="button">清空</button>
+    </div>
+    <script>
+      let input = document.querySelector("input");
+      let ul = document.querySelector("ul");
+      let button = document.querySelector("button");
+      function show() {
+        fetch("http://118.195.213.9:3002/", { method: "GET" })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            ul.innerHTML = data;
+          });
+      }
+
+      input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          let newLi = document.createElement("li");
+          newLi.innerText = input.value;
+          ul.appendChild(newLi);
+          fetch("http://118.195.213.9:3002/" + ul.innerHTML, {
+            method: "POST",
+          });
+        }
+        input.value = "";
+      });
+
+      button.addEventListener("click", function () {
+        fecth("http://118.195.213.9:3002/", { method: "DELETE" });
+        show();
+      });
+      show();
+    </script>
+  </body>
+</html>
