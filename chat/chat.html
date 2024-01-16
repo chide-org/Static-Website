@@ -83,6 +83,7 @@
       let input = document.querySelector("input");
       let ul = document.querySelector("ul");
       let button = document.querySelector("button");
+      //GET
       function show() {
         fetch("http://118.195.213.9:3002/", { method: "GET" })
           .then((response) => {
@@ -96,22 +97,24 @@
             ul.innerHTML = data;
           });
       }
-
+      //POST
       input.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
           let newLi = document.createElement("li");
           newLi.innerText = input.value;
           ul.appendChild(newLi);
-          fetch("http://118.195.213.9:3002/" + ul.innerHTML, {
+          fetch("http://118.195.213.9:3002/", {
             method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ data: ul.innerHTML }),
           });
         }
-        input.value = "";
       });
-
+      //DELETE
       button.addEventListener("click", function () {
-        fecth("http://118.195.213.9:3002/", { method: "DELETE" });
-        show();
+        fetch("http://118.195.213.9:3002/", { method: "DELETE" }).then(() =>
+          show()
+        );
       });
       show();
     </script>

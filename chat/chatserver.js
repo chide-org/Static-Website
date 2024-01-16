@@ -11,6 +11,7 @@ function backend(req, res) {
     "Access-Control-Allow-Methods": "*",
     "Access-Control-Allow-Origin": "*",
   });
+  //GET
   if (req.method === "GET") {
     if (fs.existsSync("./text.txt")) {
       let text = fs.readFileSync("./text.txt", "utf-8").toString();
@@ -18,11 +19,20 @@ function backend(req, res) {
     } else {
       res.end("{}");
     }
+
+    //POST
   } else if (req.method === "POST") {
-    let newText = decodeURI(req.url.substring(1));
-    console.log(newText); //检查substring
-    fs.writeFileSync("./text.txt", newText);
-    res.end("{}");
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk;
+    });
+    req.on("end", () => {
+      console.log("Received data:", body);
+      res.end("Data received successfully!");
+      fs.writeFileSync("./text.txt", body);
+    });
+
+    //DELETE
   } else if (req.method === "DELETE") {
     fs.writeFileSync("./text.txt", "");
     res.end("{}");
