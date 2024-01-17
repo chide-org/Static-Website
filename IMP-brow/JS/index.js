@@ -120,16 +120,7 @@ addMemo.addEventListener("click", memoEnter);
 //双击删除单行数据
 memoContent.addEventListener("dblclick", removeMemo);
 
-let lastClickTime = 0;
-memoContent.addEventListener("click", function (event) {
-  let currentTime = new Date().getTime();
-  let clickTimeDiff = currentTime - lastClickTime;
-  if (clickTimeDiff < 100) {
-    // 在短时间内触发了两次点击，可以视作双击操作
-    removeMemo(event);
-  }
-  lastClickTime = currentTime;
-});
+
 
 function removeMemo(event) {
   if (event.target.tagName === "LI") {
