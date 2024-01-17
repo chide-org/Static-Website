@@ -124,7 +124,7 @@ let lastClickTime = 0;
 memoContent.addEventListener("click", function (event) {
   let currentTime = new Date().getTime();
   let clickTimeDiff = currentTime - lastClickTime;
-  if (clickTimeDiff < 500) {
+  if (clickTimeDiff < 100) {
     // 在短时间内触发了两次点击，可以视作双击操作
     removeMemo(event);
   }
