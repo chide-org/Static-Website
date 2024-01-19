@@ -32,10 +32,7 @@
     <div id="memo" class="memo flex col center">
       <div class="content">
         <ul id="memoContent">
-          <li>
-            testdelete
-            <button type="button">×</button>
-          </li>
+          <li></li>
         </ul>
       </div>
       <div class="flex memoInputAdd">
@@ -46,7 +43,9 @@
         </div>
       </div>
       <div class="tip">
-        <span>回车增加条目</span><br /><span>单击完成条目</span><br /><span>再次单击删除</span>
+        <span>回车增加条目</span><br /><span>单击完成条目</span><br /><span
+          >再次单击删除</span
+        >
       </div>
     </div>
     <!-- 记录学习前端的每一天 -->
@@ -65,15 +64,6 @@
       style="cursor: pointer"
     />
     <!-- JS -->
-    <script>
-      let memoContent = document.querySelector(".content>ul");
-      memoContent.addEventListener("click", (event) => {
-        console.log("#event.target#", event.target);
-        console.log("#event.target.tagName#", event.target.tagname);
-        console.log("#event.target.innerText#", event.target.innerText);
-        console.log("#event.target.innerHTML#", event.target.innerHTML);
-      });
-    </script>
-    <!-- <script src="./JS/index.js"></script> -->
+    <script src="./JS/index.js"></script>
   </body>
 </html>
