@@ -117,20 +117,18 @@ memoInput.addEventListener("keyup", function (event) {
   }
 });
 addMemo.addEventListener("click", memoEnter);
-//双击删除单行数据
-memoContent.addEventListener("dblclick", removeMemo);
-
-
+//按钮删除单行数据
+memoContent.addEventListener("click", removeMemo);
 
 function removeMemo(event) {
-  if (event.target.tagName === "LI") {
+  if (getCode(event.target.innerText) === "###") {
     event.target.remove();
     let arr = memoContent.innerText.split("\n");
     localStorage.setItem("memo", JSON.stringify(arr));
     memoInput.focus();
   }
 }
-//单击delete条目函数
+//单击完成条目函数
 memoContent.addEventListener("click", deleteMemo);
 function deleteMemo(event) {
   console.log("clicked"); ///

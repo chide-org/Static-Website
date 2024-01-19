@@ -31,7 +31,12 @@
     <!-- 备忘录 -->
     <div id="memo" class="memo flex col center">
       <div class="content">
-        <ul id="memoContent"></ul>
+        <ul id="memoContent">
+          <li>
+            testdelete
+            <button type="button">×</button>
+          </li>
+        </ul>
       </div>
       <div class="flex memoInputAdd">
         <input type="text" placeholder="memo" class="memoInput" />
@@ -60,6 +65,15 @@
       style="cursor: pointer"
     />
     <!-- JS -->
-    <script src="./JS/index.js"></script>
+    <script>
+      let memoContent = document.querySelector(".content>ul");
+      memoContent.addEventListener("click", (event) => {
+        console.log("#event.target#", event.target);
+        console.log("#event.target.tagName#", event.target.tagname);
+        console.log("#event.target.innerText#", event.target.innerText);
+        console.log("#event.target.innerHTML#", event.target.innerHTML);
+      });
+    </script>
+    <!-- <script src="./JS/index.js"></script> -->
   </body>
 </html>
