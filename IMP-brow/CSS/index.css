@@ -1,0 +1,253 @@
+/* * {
+  border: 1px solid #ff0000;
+  #fd0072
+} */
+
+body {
+  background-color: #1d2735;
+  background-image: url(../image/starry-sky.jpg);
+  background-size: 100%;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.absolute {
+  position: absolute;
+}
+.left2 {
+  left: 2%;
+}
+.top2 {
+  top: 2%;
+}
+.square30 {
+  width: 30px;
+  height: 30px;
+}
+.pad5 {
+  padding: 5px;
+}
+
+.box {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+}
+/* 时间 */
+body div:first-child {
+  position: absolute;
+  top: 15%;
+}
+#time {
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+#date {
+  text-align: center;
+  color: white;
+}
+/* 输入框 */
+#input {
+  display: block;
+  background: 0;
+  margin-left: 50px;
+  border: 0;
+  padding: 4px 2px;
+  border-bottom: 2px solid white;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: rgb(255, 255, 255);
+}
+input::placeholder {
+  font-style: normal;
+  color: #a8a8a8;
+}
+
+#button {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 30%;
+  border: 0;
+}
+#button:hover {
+  opacity: 0.5;
+}
+/* 基础 */
+.flex {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+/* 备忘录 */
+.memo {
+  font-size: larger;
+  font-family: cursive;
+  color: rgb(0, 0, 0);
+  position: relative;
+  top: 27%;
+  height: 50vh;
+  width: 75vw;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+.memoInputAdd {
+  position: absolute;
+  bottom: 5%;
+}
+/* 输入框 */
+.memoInput {
+  font-family: cursive;
+  margin-left: 50px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  border: 0;
+  border-bottom: 2px solid black;
+  text-align: center;
+  line-height: 1.5;
+}
+/* 按钮 */
+.clearAll {
+  font-family: cursive;
+  border: transparent;
+  background: transparent;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.clearAll:hover {
+  opacity: 0.5;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 23%;
+  right: 20%;
+  bottom: 20%;
+  overflow: auto;
+  font-size: 1.2em;
+}
+li {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* 动画 */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: translateY(-1px);
+  }
+  25%,
+  50%,
+  75% {
+    transform: translateY(1px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+li {
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-start;
+}
+li::before {
+  content: attr(data-index) ".";
+  margin-right: 5px;
+  color: rgb(155, 127, 255);
+}
+/* 提示 */
+.tip {
+  font-size: smaller;
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  font-weight: bold;
+  color: #a8a8a8;
+}
+.addMemo {
+  display: none;
+}
+/* 记录学习前端的每一天 */
+#check {
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 40px;
+  width: 90px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0;
+  background-color: rgb(42, 145, 110);
+  color: #e7e3e3;
+  cursor: pointer;
+}
+#check:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 悬浮时的阴影效果 */
+}
+#show {
+  font-size: 1em;
+  font-family: serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 4%;
+  top: 3%;
+}
+#showTime {
+  font-size: 4em;
+  font-weight: bold;
+  color: #a8a8a8;
+}
+#preShowTime {
+  font-family: sans-serif;
+  color: #a8a8a8;
+}
+#handleSet {
+  display: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #5b87c5;
+  color: white;
+  line-height: 1.5;
+  font-size: 1em;
+  text-align: center;
+  width: 80px;
+}
