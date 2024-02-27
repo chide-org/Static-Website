@@ -102,6 +102,9 @@ function memoEnter() {
       memoInput.classList.remove("shake");
     }, 600);
   } else {
+    if (!localStorage.getItem("memo")) {
+      localStorage.setItem("memo", JSON.stringify([]));
+    }
     let memo = window.localStorage.getItem("memo");
     let arr = JSON.parse(memo);
     arr.push(memoInput.value);
@@ -126,7 +129,17 @@ function removeMemo(event) {
   if (getCode(event.target.innerText) === "###") {
     event.target.remove();
     let arr = memoContent.innerText.split("\n");
-    localStorage.setItem("memo", JSON.stringify(arr));
+    let isEmpty = arr.every(function (e) {
+      return e === "";
+    });
+    console.log("isEmpty:", isEmpty);
+    if (isEmpty) {
+      localStorage.removeItem("memo");
+      display();
+    } else {
+      localStorage.setItem("memo", JSON.stringify(arr));
+      display();
+    }
     memoInput.focus();
   }
 }
@@ -134,14 +147,7 @@ function removeMemo(event) {
 memoContent.addEventListener("click", deleteMemo);
 function deleteMemo(event) {
   console.log("clicked"); ///
-  if (getCode(event.target.innerText) === "###") {
-    console.log("getdel"); ///
-    let str = event.target.innerText;
-    event.target.innerText = str.slice(0, str.length - 3);
-    let arr = memoContent.innerText.split("\n");
-    localStorage.setItem("memo", JSON.stringify(arr));
-    display();
-  } else {
+  if (getCode(event.target.innerText) !== "###") {
     let text = event.target.innerText;
     event.target.innerText = text + "###";
     let arr = memoContent.innerText.split("\n");
@@ -238,7 +244,6 @@ function handle() {
 handleSet.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     let str = handleSet.value;
-    console.log(str); ///
     localStorage.setItem("days", str);
     showDays();
     handleSet.style.display = "none";
